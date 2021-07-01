@@ -11,6 +11,26 @@ export interface ResponseData {
 
 // 创建 axios 实例
 let service: AxiosInstance | any
+// console.log(process.env.NODE_ENV)
+console.log(import.meta.env.VITE_APP_CONTEXT)
+// console.log(process.env.VITE_APP_TITLE)
+
+// if (process.env.NODE_ENV === 'production') {
+//   /*第二层if，根据.env文件中的VUE_APP_FLAG判断是生产环境还是测试环境*/
+//   if (process.env.VUE_APP_FLAG === 'pro') {
+//     //production 生产环境
+//     // axios.defaults.baseURL = 'http://api-cs.livchatvideo.com/' //路径
+//     console.log('生产环境')
+//   } else {
+//     //test 测试环境
+//     // axios.defaults.baseURL = 'http://54.222.148.146:47000/' //路径
+//     console.log('测试环境')
+//   }
+// } else {
+//   //dev 开发环境
+//   // axios.defaults.baseURL = 'http://54.222.148.146:47000/'
+//   console.log('开发环境')
+// }
 if (import.meta.env.MODE === 'development') {
   service = axios.create({
     baseURL:

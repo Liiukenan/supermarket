@@ -3,10 +3,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "test": "vue-tsc --noEmit && vite build --mode test"
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "stylus": "^0.54.8",
     "vant": "^3.1.1",
     "vue": "^3.0.5",
     "vue-router": "^4.0.10"

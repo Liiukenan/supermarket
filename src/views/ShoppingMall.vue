@@ -29,11 +29,12 @@
 <script lang='ts'>
 import { reactive, onMounted } from "vue";
 import service from "../api/index";
+import imagesObj from "../api/images";
 export default {
   setup() {
     const state = reactive({
       msg: "Shopping Mall",
-      locationIcon: "/images/location.png",
+      locationIcon: imagesObj.location,
       imgArray: [],
       data: [],
     });
@@ -72,7 +73,7 @@ input {
 
 .search-input {
   width: 100%;
-  height: 1.3rem;
+  height: 1.6rem;
   border-top: 0px;
   border-right: 0rem;
   border-bottom: 1px solid #fff !important;
@@ -83,7 +84,7 @@ input {
 .location-icon {
   padding-top: 0.2rem;
   padding-left: 0.3rem;
-  width: 80%;
+  width: 70%;
 }
 
 .swiper-area {
